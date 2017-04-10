@@ -1,0 +1,14 @@
+<div id="product-page" class="row">
+    <div class="col-sm-9">
+        <h1 data-ng-bind-html="product.data.title"></h1>
+        <div class="product-info">
+            <span  data-ng-if="product.data.discount !== '0%'" class="originalPriceLabel">Original price</span><span class="originalPrice">{{product.data.originalPrice}}</span><br/>
+            <span data-ng-if="product.data.discount !== '0%'" class="discountLabel">Discount</span><span class="discount">{{product.data.discount}}</span><br/>
+            <span class="evaluateScoreLabel">Rating</span><span class="evaluateScore">{{product.data.evaluateScore}}</span><br/>
+            <p class="product-description" data-ng-bind-html="product.data.productDescription"></p><br/>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <mini-cart-widget data-page="'product'" data-product="product.data"></mini-cart-widget>
+    </div>
+</div>

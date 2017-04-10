@@ -1,0 +1,20 @@
+
+#product-page {
+  margin-left: 15px;
+  min-height: 650px;
+  .product-info{
+    .originalPriceLabel,
+    .discountLabel,
+    .evaluateScoreLabel{
+      margin-right: 10px;
+    }
+    .originalPrice,
+    .discount,
+    .evaluateScore{
+      font-weight: bold;
+    }
+    .product-description{
+
+    }
+  }
+}

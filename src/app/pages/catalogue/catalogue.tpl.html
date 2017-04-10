@@ -1,0 +1,30 @@
+<div id="catalogue-page" class="row">
+    <div class="col-xs-12 col-sm-11 col-sm-offset-1 product-list" data-ng-if="catalogue.productsList">
+        <div data-ng-repeat="product in catalogue.productsList track by $index"
+             class="single-product col-xs-12 col-md-4 col-sm-6 col-lg-3" id="{{product.productId}}">
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="{{product.imageUrl | thumbnail}}"
+                                    width="300" height="200"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <p class=" product-title" data-ng-bind-html="product.title"></p>
+                                <p class="price">{{product.originalPrice}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="links text-center">
+                                    <button class="btn btn-primary btn-block"
+                                            data-ui-sref="product({id:product.productId})">Product page
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

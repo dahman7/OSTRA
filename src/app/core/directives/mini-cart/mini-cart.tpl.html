@@ -1,0 +1,14 @@
+<div class="minicart">
+    <div class="thumbnail">
+        <img src="{{product.imageUrl | thumbnail}}" alt="product.productDescription">
+    </div>
+    <div class="minicart-container">
+        <h4 data-ng-bind-html="product.title"></h4>
+        <span class="minicart-price">{{product.price || product.originalPrice}}</span>
+        <div data-ng-if="page ==='product'" class="minicart-links text-center">
+            <button class="btn btn-primary btn-block" data-ng-click="goCheckout(product)">Add to cart and
+                checkout
+            </button>
+        </div>
+    </div>
+</div>

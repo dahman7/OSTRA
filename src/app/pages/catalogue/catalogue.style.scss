@@ -1,0 +1,135 @@
+
+#catalogue-page {
+  margin-top: 10px;
+
+  .single-product {
+    max-width: 270px;
+  }
+  .card-container {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    &:hover, &:focus, &:active {
+      outline: 0 !important;
+    }
+  }
+  .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+  }
+  .front {
+    z-index: 2;
+  }
+  .back .btn-simple {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+  }
+  .card-container, .front {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.16);
+  }
+  .card {
+    position: relative;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+  }
+  .card {
+    .cover {
+      height: 180px;
+      overflow: hidden;
+      border-radius: 4px 4px 0 0;
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 10px 20px 20px;
+      .product-title {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      .price, .original-price {
+        text-align: center;
+        color: #ff8b04;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .original-price {
+        text-decoration: line-through;
+      }
+      .main {
+        min-height: 120px;
+      }
+    }
+    .back .content .main {
+      height: 215px;
+    }
+    .footer {
+      border-top: 1px solid #EEEEEE;
+      color: #999999;
+      position: absolute;
+      bottom: 1px;
+      padding: 2px 0 0;
+      text-align: center;
+      .social-links {
+        font-size: 18px;
+        a {
+          margin: 0 7px;
+        }
+      }
+      .btn-simple {
+        margin-top: -6px;
+      }
+    }
+    .header {
+      padding: 15px 20px;
+      height: 90px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  #catalogue-page {
+    .single-product {
+      max-width: inherit !important;
+    }
+    .card {
+      .content {
+        display: inline-block;
+        padding: 10px 5px 20px;
+        max-width: 160px;
+        .product-title {
+          font-size: 14px;
+        }
+      }
+    }
+    .card-footer {
+      .btn {
+        min-width: 160px;
+      }
+    }
+    .card-container,
+    .front {
+      height: 230px;
+    }
+    .cover {
+      width: 230px;
+      display: inline-block;
+    }
+  }
+}

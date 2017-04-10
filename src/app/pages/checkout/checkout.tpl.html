@@ -1,0 +1,23 @@
+<div id="checkout-page" class="row">
+    <div class="col-sm-9">
+        <h1>Personal Details</h1>
+        <form class="register-form" name="checkout.formProfile" data-ng-submit="checkout.doRegister()" novalidate>
+
+            <div class="form-group" data-ng-class="{'has-error':  checkout.formProfile.fullName.$error.required && checkout.formProfile.$submitted }">
+                <label class="control-label visible-ie8 visible-ie9">Full Name</label>
+                <input class="form-control placeholder-no-fix" type="text" placeholder="Insert your full name" name="fullName" data-ng-model="$checkout.formProfile.fullName" required/>
+                <span class="help-block" data-ng-show="checkout.formProfile.fullName.$error && checkout.formProfile.$submitted">Please insert a valid full name.</span>
+            </div>
+
+            <br/>
+            <div class="row text-center">
+                <button type="submit" id="profile-submit-btn" class="btn btn-action" data-ng-click="checkout.doConfirm()">Confirm order</button>
+            </div>
+        </form>
+        <br/>
+
+    </div>
+    <div class="col-sm-3">
+        <mini-cart-widget data-ng-if="checkout.cart" data-page="'checkout'" data-product="checkout.cart"></mini-cart-widget>
+    </div>
+</div>
