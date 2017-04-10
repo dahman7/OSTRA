@@ -1,7 +1,5 @@
 'use strict';
 
-// index.html page to dist folder
-import '!!file-loader?name=[name].[ext]!../favicon.ico';
 
 // vendor files
 import "./index.vendor";
